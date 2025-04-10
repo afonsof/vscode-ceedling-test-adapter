@@ -288,7 +288,7 @@ export class CeedlingAdapter implements TestAdapter {
                 throw 'Xml report plugin not enabled';
             }
         } catch (e) {
-            return `The required Ceedling plugin 'xml_tests_report' is not enabled. ` +
+            return `${JSON.stringify(e)} The required Ceedling plugin 'xml_tests_report' is not enabled. ` +
                 `You have to edit your 'project.xml' file to enable the plugin.\n` +
                 `see https://github.com/ThrowTheSwitch/Ceedling/blob/master/docs/CeedlingPacket.md` +
                 `#tool-element-runtime-substitution-notational-substitution`;
